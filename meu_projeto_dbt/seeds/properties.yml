@@ -1,0 +1,42 @@
+version: 2
+
+seeds:
+  - name: dados_ficha_a_desafio
+    database: /content/meu_projeto_dbt/meu_banco.db
+    config:
+      column_types:
+        id_paciente: object
+        sexo: object
+        obito: object
+        bairro: object
+        raca_cor: object
+        ocupacao: object
+        religiao: object
+        luz_eletrica: object
+        data_cadastro: object
+        escolaridade: object
+        nacionalidade: object
+        renda_familiar: object
+        data_nascimento: object
+        em_situacao_de_rua: object
+        frequenta_escola: int64
+        meios_transporte: object
+        doencas_condicoes: object
+        identidade_genero: object
+        meios_comunicacao: object
+        orientacao_sexual: object
+        possui_plano_saude: object
+        em_caso_doenca_procura: object
+        situacao_profissional: object
+        vulnerabilidade_social: object
+        data_atualizacao_cadastro: object
+        familia_beneficiaria_auxilio_brasil: object
+        crianca_matriculada_creche_pre_escola: object
+        altura: float64
+        peso: float64
+        pressao_sistolica: float64
+        pressao_diastolica: float64
+        n_atendimentos_atencao_primaria: int64
+        n_atendimentos_hospital: int64
+        updated_at: object
+        tipo: object

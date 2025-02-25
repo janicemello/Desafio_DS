@@ -1,0 +1,74 @@
+
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'meu_projeto_dbt'
+version: '1.0.0'
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'meu_projeto_dbt'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+seeds:
+  meu_projeto_dbt:
+    +column_types:
+      id_paciente: object
+      sexo: object
+      obito: object
+      bairro: object
+      raca_cor: object
+      ocupacao: object
+      religiao: object
+      luz_eletrica: object
+      data_cadastro: object
+      escolaridade: object
+      nacionalidade: object
+      renda_familiar: object
+      data_nascimento: object
+      em_situacao_de_rua: object
+      frequenta_escola: int64
+      meios_transporte: object
+      doencas_condicoes: object
+      identidade_genero: object
+      meios_comunicacao: object
+      orientacao_sexual: object
+      possui_plano_saude: object
+      em_caso_doenca_procura: object
+      situacao_profissional: object
+      vulnerabilidade_social: object
+      data_atualizacao_cadastro: object
+      familia_beneficiaria_auxilio_brasil: object
+      crianca_matriculada_creche_pre_escola: object
+      altura: float64
+      peso: float64
+      pressao_sistolica: float64
+      pressao_diastolica: float64
+      n_atendimentos_atencao_primaria: int64
+      n_atendimentos_hospital: int64
+      updated_at: object
+      tipo: object
+
+# Configuring models
+# Full documentation: https://docs.getdbt.com/docs/configuring-models
+
+# In this example config, we tell dbt to build all models in the example/
+# directory as views. These settings can be overridden in the individual model
+# files using the `{{ config(...) }}` macro.
+models:
+  meu_projeto_dbt:
+    # Config indicated by + and applies to all files under models/example/
+    example:
+      +materialized: view

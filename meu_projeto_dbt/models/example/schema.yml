@@ -1,0 +1,20 @@
+
+version: 2
+
+models:
+  - name: base_importada
+    description: "Base importada do CSV"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+  - name: leitura_base_csv
+    description: "Base importada do CSV e leitura de tudo importado"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
