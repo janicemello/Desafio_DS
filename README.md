@@ -13,6 +13,10 @@ DBT
 
 Devido ao grande volume de dados e às limitações do DBT em processar a base completa, foi necessário implementar uma estratégia de segmentação antes de executar o "DBT SEED".
 
+##Arquitetura das pastas
+O código está na pasta 'scr' 
+O SQL está em 'dados_ficha_tratado'
+Os docs gerados pelo chunk_size está no diretório 'seeds'
 ### Processo de Segmentação e Unificação
 
 1. Utilizei o parâmetro `chunk_size` para dividir o arquivo original em segmentos de 500 linhas cada
@@ -21,6 +25,8 @@ Devido ao grande volume de dados e às limitações do DBT em processar a base c
 4. Após o processamento completo, realizei a unificação dos segmentos utilizando Python, em vez de SQL, para garantir performance adequada considerando o volume de mais de 100 arquivos
 5. Com a base unificada, iniciei o tratamento dos dados via Python
 6. Inicio do tratamento em SQL
+
+
 
 ## Análise das Inconsistências Encontradas
 
