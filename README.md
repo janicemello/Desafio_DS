@@ -78,3 +78,4 @@ A escolha da mediana como método de imputação para variáveis como altura, pe
 ### Análise Demográfica Avançada
 - Exploração de correlações entre variáveis socioeconômicas (renda, escolaridade) e indicadores de saúde
 - Desenvolvimento de análises estratificadas para identificação de padrões demográficos relevantes
+- Explorar mais as tendências demográficas específicas. Por exemplo, como diferentes níveis de renda ou formação educacional se correlacionam com indicadores de saúde.
