@@ -14,9 +14,9 @@ DBT
 Devido ao grande volume de dados e às limitações do DBT em processar a base completa, foi necessário implementar uma estratégia de segmentação antes de executar o "DBT SEED".
 
 ## Arquitetura das pastas
-# O código está na pasta 'scr' 
-# O SQL está em 'dados_ficha_tratado'
-# Os docs gerados pelo chunk_size está no diretório 'seeds'
+ O código está na pasta 'scr' 
+ O SQL está em 'dados_ficha_tratado'
+ Os docs gerados pelo chunk_size está no diretório 'seeds'
 
 
 ### Processo de Segmentação e Unificação
